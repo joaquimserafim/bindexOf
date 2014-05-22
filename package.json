@@ -1,0 +1,29 @@
+{
+  "name": "buffer-search",
+  "version": "1.0.0",
+  "description": "Search a Buffer inside another Buffer using the Boyer-Moore algorithm search ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joaquimserafim/buffer-search.git"
+  },
+  "keywords": [
+    "buffer",
+    "search",
+    "Boyer-Moore",
+    "indexOf",
+    "find"
+  ],
+  "author": "@jaoquimserafim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquimserafim/buffer-search/issues"
+  },
+  "homepage": "https://github.com/joaquimserafim/buffer-search",
+  "devDependencies": {
+    "tape": "^2.13.1"
+  }
+}
