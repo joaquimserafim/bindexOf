@@ -5,14 +5,23 @@
 [![Build Status](https://travis-ci.org/joaquimserafim/buffer-search.png?branch=master)](https://travis-ci.org/joaquimserafim/buffer-search)
 
 
-Search a Buffer inside another Buffer using the [Boyer-Moore](http://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string_search_algorithm) algorithm search
+####summary
+Search a Buffer inside another Buffer, runs pretty well for small buffers or searches that the searchValue is found near the beginning, returns the first occurrence of the specified value, starting the search at fromIndex, returns -1 if the value is not found.
 
+**Case-sensitivity:** The `buffer-search` is case sensitive.
 
+**Benchmark:** run `npm run bench` to see some results.
 
-**V1**
+**V1.2**
 
+####app
 
-####Example
+	search(buffer, searchBuffer[, fromIndex]])
+	
+ **fromIndex**
+*The location to start the search from. It can be any integer between 0 and the length of the buffer. The default value is 0.*
+
+####example
 
 	var search = require('buffer-search');
 	

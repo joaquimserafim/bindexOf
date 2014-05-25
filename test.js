@@ -2,12 +2,11 @@ var test = require('tape');
 var search = require('./');
 
 
-test('find a buffer inside another buffer', function (t) {
-  t.plan(1);
-  var buffer = new Buffer('Node.js is a platform built on Chrome\'s JavaScript ' +
-                   'runtime for easily building fast, scalable network applications.platform');
+test('searches for a buffer', function (t) {
+  t.plan(2);
 
-  var buffer_to_find = new Buffer('easily');
+  var buffer = new Buffer('Node.js is a platform built on Chrome.');
 
-  t.deepEqual(search(buffer, buffer_to_find), 63, 'should find `easily` at position 63 inside the major buffer!');
+  t.deepEqual(search(buffer, new Buffer('on')), 28, 'should find `on` and return position 28.');
+  t.deepEqual(search(buffer, new Buffer('HELLO')), -1, 'shouldn\'t find anything and return -1.')
 });
