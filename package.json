@@ -1,6 +1,6 @@
 {
   "name": "bindexof",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "find the index of a Buffer in another Buffer",
   "main": "index.js",
   "scripts": {
