@@ -1,6 +1,6 @@
 {
   "name": "bindexOf",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "find the index of a Buffer in another Buffer",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "jshint": "./node_modules/jshint/bin/jshint -c .jshintrc index.js test.js",
     "codestyle": "./node_modules/jscs/bin/jscs -p google index.js test.js",
     "coverage": "open coverage/lcov-report/index.html",
-    "bench": "node bench.js"
+    "bench1": "node bench.js",
+    "bench2": "node bench_1.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/joaquimserafim/bindexOf",
   "devDependencies": {
     "bench": "^0.3.5",
+    "buffer-indexof": "0.0.2",
     "istanbul": "^0.3.2",
     "jscs": "^1.7.3",
     "jshint": "^2.5.7",

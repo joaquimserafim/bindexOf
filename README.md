@@ -10,9 +10,10 @@ Find the index of a buffer inside another Buffer, runs pretty well for small buf
 
 **Case-sensitivity:** The `bindexOf` is case sensitive.
 
-**Benchmark:** run `npm run bench` to see some results.
+**Benchmark:** run `npm run bench1 && npm run bench2` to see some results.
 
-**V1.2**
+node v0.10.\*
+
 
 ####app
 

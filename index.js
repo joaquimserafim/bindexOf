@@ -1,20 +1,30 @@
-'use strict'
+'use strict';
 
 module.exports = bindexOf;
 
-function bindexOf(buffer, searchValue, fromIndex) {
-  fromIndex = fromIndex || 0;
+function bindexOf(buffer, search, offset) {
+  offset = offset || 0;
 
-  for (var i = fromIndex, j = 0; i < buffer.length; i++) {
-    // not equal continue
-    if (buffer[i] ^ searchValue[j]) {
-      j = 0;
-      continue;
-    }
-    // equal, increment j and verify j has the same value as searchValue.length
-    j++;
-    if (searchValue.length === j)
-      return searchValue.length === 1 ? i : (i - j + 1);
+  if (search.length + offset > buffer.length) {
+    return -1;
   }
-  return -1;
+
+  var x = 0;
+  var f = -1;
+
+  for (; offset < buffer.length; offset++) {
+    if (buffer[offset] === search[x]) {
+      if (!~f) {
+        f = offset;
+      }
+      if (++x === search.length) {
+        break;
+      }
+    } else {
+      f = -1;
+      x = 0;
+    }
+  }
+
+  return f;
 }
