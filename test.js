@@ -2,7 +2,7 @@ var test = require('tape');
 var bindexOf = require('./');
 
 
-test('searches for a buffer', function (t) {
+test('searches the index for a buffer in a buffer', function (t) {
   t.plan(2);
 
   var buffer = new Buffer('Node.js is a platform built on Chrome.');
