@@ -33,6 +33,12 @@
     "istanbul": "^0.3.2",
     "jscs": "^1.7.3",
     "jshint": "^2.5.7",
+    "pre-commit": "0.0.9",
     "tape": "^2.14.0"
-  }
+  },
+  "pre-commit": [
+    "jshint",
+    "codestyle",
+    "test"
+  ]
 }
