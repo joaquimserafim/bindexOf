@@ -1,7 +1,7 @@
 
-module.exports = search;
+module.exports = bindexOf;
 
-function search (buffer, searchValue, fromIndex) {
+function bindexOf(buffer, searchValue, fromIndex) {
   fromIndex = fromIndex || 0;
 
   for (var i = fromIndex, j = 0; i < buffer.length; i++) {
