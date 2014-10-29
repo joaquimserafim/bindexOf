@@ -1,20 +1,20 @@
-var assert = require('assert');
-var bench = require('bench');
-var search = require('./');
+var assert    = require('assert');
+var bench     = require('bench');
+var bindexOf  = require('./');
 
-var smallString = 'Hello world';
-var smallBuffer = new Buffer(smallString);
-var toFind = 'wor';
-var toFindBuffer = new Buffer(toFind);
+var smallString   = 'Hello world';
+var smallBuffer   = new Buffer(smallString);
+var toFind        = 'wor';
+var toFindBuffer  = new Buffer(toFind);
 
-var bigString = 'Node.js is a platform built on Chrome\'s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.';
-var bigBuffer = new Buffer(bigString);
-var toFindInBig = 'an';
+var bigString         = 'Node.js is a platform built on Chrome\'s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.';
+var bigBuffer         = new Buffer(bigString);
+var toFindInBig       = 'an';
 var toFindInBigBuffer = new Buffer(toFindInBig);
 
 
 function useSearch (buffer, find, pos) {
-  var res = search(buffer, find);
+  var res = bindexOf(buffer, find);
   assert.equal(res, pos);
   return res;
 }
