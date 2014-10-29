@@ -1,14 +1,14 @@
-# buffer-search
+# bindexOf
 
-<a href="https://nodei.co/npm/buffer-search/"><img src="https://nodei.co/npm/buffer-search.png?downloads=true"></a>
+<a href="https://nodei.co/npm/bindexOf/"><img src="https://nodei.co/npm/bindexOf.png?downloads=true"></a>
 
-[![Build Status](https://travis-ci.org/joaquimserafim/buffer-search.png?branch=master)](https://travis-ci.org/joaquimserafim/buffer-search)
+[![Build Status](https://travis-ci.org/joaquimserafim/bindexOf.png?branch=master)](https://travis-ci.org/joaquimserafim/bindexOf)
 
 
 ####summary
-Search a Buffer inside another Buffer, runs pretty well for small buffers or searches that the searchValue is found near the beginning, returns the first occurrence of the specified value, starting the search at fromIndex, returns -1 if the value is not found.
+Find the index of a buffer inside another Buffer, runs pretty well for small buffers or searches that the searchValue is found near the beginning, returns the first occurrence of the specified value, starting the search at fromIndex, returns -1 if the value is not found.
 
-**Case-sensitivity:** The `buffer-search` is case sensitive.
+**Case-sensitivity:** The `bindexOf` is case sensitive.
 
 **Benchmark:** run `npm run bench` to see some results.
 
@@ -16,14 +16,14 @@ Search a Buffer inside another Buffer, runs pretty well for small buffers or sea
 
 ####app
 
-	search(buffer, searchBuffer[, fromIndex]])
+	bindexOf(buffer, searchBuffer[, fromIndex]])
 	
  **fromIndex**
 *The location to start the search from. It can be any integer between 0 and the length of the buffer. The default value is 0.*
 
 ####example
 
-	var search = require('buffer-search');
+	var bindexOf = require('bindexOf');
 	
 	
 	var buffer = new Buffer('Node.js is a platform built on Chrome\'s JavaScript ' +
@@ -34,6 +34,6 @@ Search a Buffer inside another Buffer, runs pretty well for small buffers or sea
     var buffer_to_find = new Buffer('easily');
     
     
-    var find = search(buffer, buffer_to_find);
+    var find = bindexOf(buffer, buffer_to_find);
     
-    console.log(find); // 63
+    console.log(find); // index 63
