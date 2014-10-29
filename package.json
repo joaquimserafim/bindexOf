@@ -1,7 +1,7 @@
 {
-  "name": "buffer-search",
-  "version": "1.2.0",
-  "description": "Search a Buffer inside another Buffer",
+  "name": "bindexOf",
+  "version": "1.0.0",
+  "description": "find the index of a Buffer in another Buffer",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/joaquimserafim/buffer-search.git"
+    "url": "git://github.com/joaquimserafim/bindexOf.git"
   },
   "keywords": [
     "buffer",
@@ -20,9 +20,9 @@
   "author": "@jaoquimserafim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joaquimserafim/buffer-search/issues"
+    "url": "https://github.com/joaquimserafim/bindexOf/issues"
   },
-  "homepage": "https://github.com/joaquimserafim/buffer-search",
+  "homepage": "https://github.com/joaquimserafim/bindexOf",
   "devDependencies": {
     "bench": "^0.3.5",
     "tape": "^2.13.1"
