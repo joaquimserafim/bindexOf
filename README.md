@@ -1,6 +1,6 @@
 # bindexOf
 
-<a href="https://nodei.co/npm/bindexOf/"><img src="https://nodei.co/npm/bindexOf.png?downloads=true"></a>
+<a href="https://nodei.co/npm/bindexof/"><img src="https://nodei.co/npm/bindexOf.png?downloads=true"></a>
 
 [![Build Status](https://travis-ci.org/joaquimserafim/bindexOf.png?branch=master)](https://travis-ci.org/joaquimserafim/bindexOf)
 
@@ -24,7 +24,7 @@ node v0.10.\*
 
 ####example
 
-	var bindexOf = require('bindexOf');
+	var bindexOf = require('bindexof');
 	
 	
 	var buffer = new Buffer('Node.js is a platform built on Chrome\'s JavaScript ' +
